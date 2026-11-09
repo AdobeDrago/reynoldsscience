@@ -20,6 +20,8 @@ export default async function decorate(block) {
   bar.className = 'header-bar';
   const nav = document.createElement('nav');
   nav.setAttribute('aria-label', 'primary navigation');
+  // the pipeline wraps list-item content in <p>: unwrap so links sit directly in <li>
+  links.querySelectorAll('li > p').forEach((p) => p.replaceWith(...p.childNodes));
   nav.append(links);
   nav.querySelectorAll(':scope > ul > li').forEach((li) => {
     const sub = li.querySelector('ul');

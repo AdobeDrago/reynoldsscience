@@ -211,3 +211,6 @@ header .header-toggle {
     align-items: flex-start;
   }
 }
+header .header-bar picture {
+  display: block;
+}
