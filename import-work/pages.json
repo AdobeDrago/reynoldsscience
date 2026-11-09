@@ -1,0 +1,22 @@
+{
+ "repo": "..",
+ "sections": "pages",
+ "da": {
+  "org": "AdobeDrago",
+  "site": "reynoldsscience",
+  "dir": "da"
+ },
+ "template": "home",
+ "pages": {
+  "home": {
+   "path": "index",
+   "source": "https://www.reynoldsscience.com/",
+   "gate": "gate/home.json",
+   "bundle": "work/bundles/home"
+  }
+ },
+ "fragments": {
+  "_footer": "footer",
+  "_nav": "nav"
+ }
+}

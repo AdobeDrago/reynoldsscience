@@ -13,5 +13,12 @@ export default function decorate(block) {
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  if (block.classList.contains('cta')) {
+    ul.querySelectorAll('a').forEach((a) => {
+      const span = document.createElement('span');
+      span.textContent = a.textContent;
+      a.replaceChildren(span);
+    });
+  }
   block.replaceChildren(ul);
 }
