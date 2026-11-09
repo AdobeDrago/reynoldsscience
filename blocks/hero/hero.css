@@ -1,37 +1,15 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
-
-.hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
-}
-
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
-  }
-}
+.hero-container .hero-wrapper { max-width: unset; padding: 0; }
+.hero { position: relative; height: 450px; overflow: hidden; font-family: Montserrat, sans-serif; }
+.hero .hero-slides { display: flex; height: 100%; transition: transform .6s ease; }
+.hero .hero-slide { position: relative; flex: 0 0 100%; height: 100%; overflow: hidden; }
+.hero .hero-image { position: absolute; inset: 0; }
+.hero .hero-image::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 285px; background: linear-gradient(to top, #01529d 0%, rgb(1 82 157 / 0%) 80%); }
+.hero .hero-image picture, .hero .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero .hero-text { position: relative; z-index: 1; max-width: 760px; margin-left: 115px; padding: 170px 0 0 60px; box-sizing: border-box; color: #fff; }
+.hero h1 { margin: 0 0 10px; font-size: 39px; line-height: 46.8px; font-weight: 700; color: #fff; }
+.hero .hero-text p { margin: 0 0 18px; font-size: 18px; line-height: 27px; color: #fff; }
+.hero .hero-text p:last-child { margin: 0; }
+.hero .hero-text a { display: inline-block; padding: 6px 21px; border: 2px solid #fff; border-radius: 6px; color: #fff; font-size: 16px; font-weight: 700; line-height: 28px; letter-spacing: .32px; text-transform: uppercase; }
+.hero .hero-dots { position: absolute; z-index: 2; bottom: 16px; left: 50%; display: flex; gap: 8px; transform: translateX(-50%); }
+.hero .hero-dots button { width: 10px; height: 10px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: transparent; }
+.hero .hero-dots button[aria-current='true'] { background: #fff; }

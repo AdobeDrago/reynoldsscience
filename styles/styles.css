@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -15,13 +17,13 @@
   --background-color: white;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
+  --text-color: #333;
+  --link-color: #01519d;
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: montserrat, system-ui, sans-serif;
+  --heading-font-family: montserrat, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -37,7 +39,8 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 110px;
+  --brand-blue: #01519d;
 }
 
 /* fallback fonts */
@@ -74,10 +77,10 @@ body {
   display: none;
   margin: 0;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: #0f172a;
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 28px;
 }
 
 body.appear {
@@ -297,24 +300,21 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
 
 /* section metadata */
 main .section.light,
@@ -322,4 +322,50 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* Reynolds Science */
+*,
+::before,
+::after {
+  border: 0 solid #e2e8f0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+main > .section:first-of-type > div {
+  max-width: none;
+  padding: 0;
+}
+
+main > .section:has(.cards.cta) {
+  margin-bottom: 81px;
+}
+
+main > .section:has(.cards.publications) {
+  margin-top: 16px;
+}
+
+main > .section:has(.cards.publications) > div {
+  max-width: none;
+  padding: 0 16px;
+}
+
+main > .section > .default-content-wrapper > h4 {
+  margin: 0 0 16px;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #01519d;
+  color: #01519d;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 31.25px;
+  text-transform: uppercase;
 }

@@ -25,3 +25,234 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* Reynolds Science variants: cta + publications */
+.cards {
+  box-sizing: border-box;
+}
+
+.cards-container:has(.cards.cta) {
+  background: linear-gradient(#d4d4d4 0%, #fff 70%);
+}
+
+.cards.cta p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cards.publications p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cards.cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 43px;
+  padding: 0 18px;
+  border: 2px solid #01519d;
+  border-radius: 6px;
+  background: #fff;
+  color: #01519d;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+}
+
+/* cta: three teasers with heading rule, image and button */
+.cards.cta > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 378.7px);
+  gap: 0 32px;
+  margin: 0;
+  padding: 32px 0;
+  list-style: none;
+}
+
+.cards.cta > ul > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: 61px auto auto;
+  align-content: start;
+  column-gap: 21px;
+  width: 399px;
+  max-width: 399px;
+  margin: 0;
+  border: 0;
+  background: none;
+  font-family: Montserrat, sans-serif;
+}
+
+.cards.cta > ul > li::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: 399px;
+  height: 1px;
+  border-radius: 999px;
+  background: #01519d;
+}
+
+.cards.cta .cards-card-body {
+  display: contents;
+  margin: 0;
+}
+
+.cards.cta h3 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  place-self: start start;
+  margin: 0;
+  padding: 0;
+  color: #01519d;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.cards.cta .cards-card-image {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+  line-height: 28px;
+}
+
+.cards.cta .cards-card-image picture {
+  display: block;
+  height: 100%;
+}
+
+.cards.cta .cards-card-image img {
+  display: block;
+  width: 140px;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cards.cta p:has(a) {
+  grid-row: 3;
+  align-self: start;
+  margin-top: 35.75px;
+}
+
+/* publications: row of article cards, three visible */
+.cards.publications {
+  width: 1273px;
+  margin: 0 67.5px;
+}
+
+.cards.publications > ul {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 32px 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.cards.publications > ul > li {
+  display: flex;
+  flex: 0 0 404px;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
+  font-family: Montserrat, sans-serif;
+}
+
+.cards.publications .cards-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 305px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cards.publications .cards-card-image picture {
+  display: block;
+  width: 100%;
+}
+
+.cards.publications .cards-card-image img {
+  display: block;
+  width: 100%;
+  height: 305px;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
+
+.cards.publications .cards-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  height: 162px;
+  margin: 0;
+  padding: 16px 20px 20px;
+  overflow: hidden;
+}
+
+.cards.publications h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23.4px;
+}
+
+.cards.publications h3 a {
+  color: #01519d;
+}
+
+.cards.publications p:first-child {
+  position: relative;
+  margin: 0;
+  padding-left: 16px;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24.5px;
+}
+
+.cards.publications p:first-child::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 10px;
+  height: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 12'%3E%3Crect x='.5' y='1.5' width='9' height='10' rx='1' fill='none' stroke='%231f2a44'/%3E%3Cpath d='M0 4h10M3 0v3M7 0v3' stroke='%231f2a44'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cards.publications .cards-card-body > h3,
+.cards.publications .cards-card-body > p:last-child {
+  display: -webkit-box;
+  flex: 0 0 auto;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.cards.publications .cards-card-body > p:last-child {
+  flex: 1 1 0%;
+}

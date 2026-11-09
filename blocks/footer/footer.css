@@ -1,20 +1,108 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+footer .footer {
+  position: relative;
+  padding: 48px 0;
+  background-color: #01529d;
+  color: #fff;
+  font-family: Montserrat, system-ui, sans-serif;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+/* brand strip along the bottom edge */
+footer .footer::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 14px;
+  background: linear-gradient(to right, #222f61 0%, #222f61 30.28%, #01519d 30.28%, #01519d 52.02%, #17b0e6 52.02%, #17b0e6 64.62%, #ed7e23 64.62%, #ed7e23 73.11%, #f9b916 73.11%, #f9b916 79.52%, #51af47 79.52%, #51af47 85.93%, #aec936 85.93%, #aec936 91.87%, #5b328a 91.87%, #5b328a 96.88%, #e62582 96.88%, #e62582 100%);
+}
+
+footer .footer a {
+  color: #fff;
 }
 
 footer .footer p {
   margin: 0;
+  color: #fff;
+  font-size: 8px;
+  line-height: 14px;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+footer .footer ul {
+  line-height: normal;
+}
+
+footer .footer ul a {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+footer .footer .default-content-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 162.281px 649.141px 324.578px;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 16px 32px;
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* column dividers */
+footer .footer .default-content-wrapper::before,
+footer .footer .default-content-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgb(255 255 255 / 50%);
+}
+
+footer .footer .default-content-wrapper::before {
+  left: 201px;
+}
+
+footer .footer .default-content-wrapper::after {
+  left: 882px;
+}
+
+footer .footer .default-content-wrapper > p:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+footer .footer .default-content-wrapper > p:nth-child(1) img {
+  display: block;
+  width: 129.3px;
+  height: 48px;
+}
+
+footer .footer .default-content-wrapper > p:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  margin-top: 48px;
+}
+
+footer .footer .default-content-wrapper > p:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  padding-right: 32px;
+}
+
+footer .footer .default-content-wrapper > ul {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
 }

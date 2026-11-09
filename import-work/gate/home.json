@@ -1,0 +1,40 @@
+{
+ "site": "../site.json",
+ "page": "home",
+ "source": "https://www.reynoldsscience.com/",
+ "rebuild": "http://localhost:3000/",
+ "widths": [
+  1440
+ ],
+ "out": "work/gate/home",
+ "bundle": "../work/bundles/home",
+ "snapshot": null,
+ "timelines": [],
+ "sections": [
+  {
+   "name": "header",
+   "source": "header",
+   "rebuild": "header .header"
+  },
+  {
+   "name": "hero",
+   "source": "@sec:1",
+   "rebuild": "main .section:nth-child(1)"
+  },
+  {
+   "name": "cta",
+   "source": "@sec:2",
+   "rebuild": "main .section:nth-child(2)"
+  },
+  {
+   "name": "publications",
+   "source": "@sec:4",
+   "rebuild": "main .section:nth-child(3)"
+  },
+  {
+   "name": "footer",
+   "source": "footer",
+   "rebuild": "footer .footer"
+  }
+ ]
+}
